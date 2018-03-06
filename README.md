@@ -40,4 +40,4 @@ For the "Users" part:
  - GET /users/token
  - POST /users
  - PUT /users/token
- - DELETE /users
+ - DELETE /users/token
