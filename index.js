@@ -11,10 +11,10 @@ let date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
 let app = express();
 let pool  = mysql.createPool({
     connectionLimit : 5,
-    host            : process.env.MYSQL_ADDON_HOST,
-    user            : process.env.MYSQL_ADDON_USER,
-    password        : process.env.MYSQL_ADDON_PASSWORD,
-    database        : process.env.MYSQL_ADDON_DB
+    host            : process.env.MYSQL_ADDON_HOST || require('./mysql.json').Host,
+    user            : process.env.MYSQL_ADDON_USER || require('./mysql.json').User,
+    password        : process.env.MYSQL_ADDON_PASSWORD || require('./mysql.json').Password,
+    database        : process.env.MYSQL_ADDON_DB || require('./mysql.json').Database
 })
 
 app.use(bodyParser.json())  // for parsing application/json
