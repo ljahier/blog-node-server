@@ -6,7 +6,11 @@ module.exports = (app, pool, mysql, sha256) => {
 
         pool.query('SELECT * FROM posts', function (error, results) {
             if (error) throw error;
-            res.send(results)
+            if (results <= 2) {
+                res.end('There is no post in database')
+            } else {
+                res.send(results)
+            }
         })
     })
 }
