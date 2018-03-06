@@ -24,3 +24,20 @@ You have 2 choices, if you want, you can juste use a mysql.json file with the id
 Or you can use the Environment variables with process.env.ENVIRONEMENT_VARIABLE, you can setup a [clever cloud](https://clever-cloud.com) database :)
 
 And after you can deploy on [clever cloud](https://clever-cloud.com) your api ;) and she's accessible by everybody.
+
+The URI avalaible is:
+
+For the "Blog" part:
+ - GET /
+ - GET /blog
+ - GET /blog/id (number)
+ - POST /blog
+ - PUT /blog/id (number)
+ - DELETE /blog/id (number)
+
+For the "Users" part:
+ - GET /users
+ - GET /users/token
+ - POST /users
+ - PUT /users/token
+ - DELETE /users
