@@ -58,7 +58,8 @@ module.exports = (app, pool, mysql, sha256, date, bodyParser, crypto) => {
 
         let password = sha256(req.body.password)
 
-        let post = {username: req.body.username, password: password, email: req.body.email, token: generateUserToken, created_at: date}
+        // The default level is user, you can manage all your posts. You can't manage the users and others posts. For do this, you need to be admin
+        let post = {username: req.body.username, password: password, email: req.body.email, token: generateUserToken, level: "user", created_at: date}
 
         try {
             pool.query('INSERT INTO users SET ?', post, function (error, results) {
@@ -88,7 +89,6 @@ module.exports = (app, pool, mysql, sha256, date, bodyParser, crypto) => {
             put.password = req.body.password
         if (req.body.email != undefined) {
             put.email = req.body.email
-
         }
 
         try {

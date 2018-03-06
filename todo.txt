@@ -1,0 +1,6 @@
+- générer un token par utilisateur
+- delimiter les droits
+- recuperer le token sur le client et le placer dans le header, pour qu'a chaque requests l'api check le header pour voir si le token existe dans la db.
+- Afficher tout dans le client
+- Faire un client propre
+- Push to prod env
