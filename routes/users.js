@@ -5,16 +5,6 @@ module.exports = (app, pool, mysql, sha256, date, bodyParser, crypto) => {
         req.token = token
         next()
     })
-    // function verifToken(req) {
-    //     pool.query('SELECT token FROM users', function (error, results) {
-    //         if (error) throw error;
-    //         console.log(results)
-    //         let tokenHeader = req.header('Authorization')
-    //         if (results == tokenHeader) {
-    //             res.send("GROS PROUT")
-    //         }
-    //     })
-    // }
 
     // Show all users registered in database
     app.get('/users', (req, res) => {
