@@ -3,7 +3,7 @@ I have chose to use nodejs for construct api to blog backend and vuejs for const
 
 For use this base, you need to follow some step
 ```
-git clone git@github.com:ljahier/blog-node.git
+git clone git@github.com:ljahier/blog-node-server.git
 cd blog-node/
 ```
 You need install the npm packages and you need to configure your database:
